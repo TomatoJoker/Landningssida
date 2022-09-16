@@ -22,18 +22,24 @@
 
 /*images*/
 
+@mixin font-BlackPro {
+  font-family: 'BlackerPro', sans-serif;
+  font-weight: 500;
+}
+
 @mixin cover {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%; }
-
+  background-position: 50% 50%;
+}
 
   // vertical-align at center
 @mixin vcenter {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%); }
+  transform: translate(-50%,-50%);
+}
 
 /*=======================START-MEDIA=====================*/
 @mixin media($width) {
@@ -101,7 +107,6 @@ $animation-speed: .3s;
 @mixin font($fontName, $folderName, $fileName, $weight, $style) {
   @font-face {
     font-family: #{$fontName};
-    font-display: swap;
     src: url("../fonts/#{$folderName}/#{$fileName}.woff") format("woff"), url("../fonts/#{$folderName}/#{$fileName}.woff2") format("woff2");
     font-weight: #{$weight};
     font-style: #{$style};

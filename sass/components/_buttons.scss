@@ -5,13 +5,24 @@
   font-weight: 700;
   font-size: 21px;
   line-height: 1.43;
+  display: inline-block;
   &__primary {
     color: $dark;
     background: $primary-light;
+    border: 2px solid $primary-light;
+    @include hover {
+      background: $transparent;
+      color: $primary-light;
+    }
   }
   &__second {
     color: $light;
     background: $primary;
+    border: 2px solid $primary;
+    @include hover {
+      background: $transparent;
+      color: $primary;
+    }
   }
 }
 
