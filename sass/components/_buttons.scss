@@ -1,0 +1,17 @@
+.button {
+  padding: 17px 44px;
+  @include transition;
+  border-radius: 46px;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.43;
+  &__primary {
+    color: $dark;
+    background: $primary-light;
+  }
+  &__second {
+    color: $light;
+    background: $primary;
+  }
+}
+
