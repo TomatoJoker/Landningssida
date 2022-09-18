@@ -1,5 +1,5 @@
 @mixin transition($property: all, $speed: 0.3s, $time-function: ease) {
-	transition: property $speed $time-function;
+	transition: $property $speed $time-function;
 }
 
 @mixin anim-linear{
@@ -159,10 +159,10 @@ $animation-speed: .3s;
     }
     @supports not (row-gap: $value) {
       & {
-        margin-bottom: -$value;
+        margin-top: -$value;
       }
       & > * {
-        margin-bottom: $value;
+        margin-top: $value;
       }
     }
   } @else if $property == gap {
@@ -172,11 +172,11 @@ $animation-speed: .3s;
     @supports not (gap: $value) {
       margin-right: calc(0px - (#{$value} / 2));
       margin-left: calc(0px - (#{$value} / 2));
-      margin-bottom: -$value;
+      margin-top: -$value;
       & > * {
         margin-right: calc(#{$value} / 2);
         margin-left: calc(#{$value} / 2);
-        margin-bottom: $value;
+        margin-top: $value;
       }
     }
   }
@@ -190,6 +190,10 @@ $animation-speed: .3s;
   @supports not ($property: $value) {
     @content;
   }
+}
+
+@mixin flex-basis-responsive($number, $gap, $item) {
+  flex-basis: calc((100% - #{$number} * #{$gap}) / #{$item});
 }
 
 // grid

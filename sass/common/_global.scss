@@ -5,7 +5,7 @@ body {
 }
 
 p {
-  line-height: 1.4;
+  line-height: $global-line-height;
 }
 
 .container {
@@ -46,6 +46,13 @@ h1, h2, h3, .h1-title, .h2-title, .h3-title {
   line-height: 1.42;
 }
 
+.icon {
+  display: inline-block;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -67,10 +74,21 @@ h1, h2, h3, .h1-title, .h2-title, .h3-title {
   }
 }
 
+.light-section {
+  background-color: $primary-light;
+}
+
 .text-wrap {
   p {
     &:not(:last-child) {
       margin-bottom: 10px;
     }
   }
+}
+
+section {
+  //fix for 2k size
+  max-width: 1920px;
+  margin: auto;
+  // end fix
 }
