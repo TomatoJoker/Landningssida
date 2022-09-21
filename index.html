@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,7 @@
   <link rel="preload" href="./fonts/Blacker-Pro/BlackerPro-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/Source-Sans-Pro/Source-Sans-Pro-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/Source-Sans-Pro/Source-Sans-Pro-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" type="text/css" href="./css/lib.min.css">
   <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
@@ -16,11 +17,13 @@
 
     <div class="wrapper">
         <header class="header">
-    <ul class="social">
-        <li class="social__item"></li>
-        <li class="social__item"></li>
-    </ul>
     <div class="container header__inner">
+        <ul class="social">
+            <li class="social__item"><a href="#" target="_blank" rel="nofollow"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </a></li>
+            <li class="social__item"><a href="#" target="_blank" rel="nofollow"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                </a></li>
+        </ul>
         <nav class="header__navigation">
             <ul class="menu">
                 <li class="menu__item"><a href="#">Hur fungerar det?</a></li>
@@ -37,6 +40,35 @@
             </ul>
         </nav>
         <a href="#" class="button button__small">Handla nu</a>
+    </div>
+    <div class="container header__mobile">
+        <span class="logo">
+            <img src="./images/logo.png" width="107" height="103" alt="">
+        </span>
+        <button class="burger js-burger" type="button">
+            <span></span>
+        </button>
+        <div class="header__modal js-burger-modal">
+            <ul class="menu">
+                <li class="menu__item"><a href="#">Hur fungerar det?</a></li>
+                <li class="menu__item"><a href="#">For foretag</a></li>
+                <li class="menu__item"><a href="#">Fragor och svar</a></li>
+            </ul>
+            <ul class="menu">
+                <li class="menu__item"><a href="#">Presentkort</a></li>
+                <li class="menu__item"><a href="#">Kundtjanst</a></li>
+                <li class="menu__item"><span>Noahs lokala matpasar</span></li>
+            </ul>
+            <div class="header__mobile-contact row">
+                <ul class="social">
+                    <li class="social__item"><a href="#" target="_blank" rel="nofollow"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+                        </a></li>
+                    <li class="social__item"><a href="#" target="_blank" rel="nofollow"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        </a></li>
+                </ul>
+                <button class="button button__small">Handla nu</button>
+            </div>
+        </div>
     </div>
 </header>
         <main class="main">
@@ -119,7 +151,7 @@
             <section class="fqa light-section section">
                 <div class="container">
                     <div class="fqa__inner">
-                        <div class="fqa__title h2-title">Frågor och svar</div>
+                        <h2 class="fqa__title h2-title">Frågor och svar</h2>
                         <div class="fqa__accordions">
                             <div class="fqa__item js-accordion">
                                 <div class="fqa__sub-title">
@@ -255,6 +287,7 @@
             </section>
             <section class="review primary-section">
                 <div class="container">
+                    <h2 class="hidden">Recension</h2>
                     <div class="review__left section">
                         <p class="review__quote">”Det känns som att det är otroligt hög och fin kvalitet på de varor som jag provat hittills.
                             Sen att jag dessutom stöttar det lokala näringslivet känns viktigt för mig.”</p>
@@ -275,8 +308,8 @@
                 </div>
             </section>
         </main>
-        
     </div>
+    <div class="js-overlay overlay"></div>
 
 
 <script src="js/lib.min.js"></script>
