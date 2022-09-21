@@ -4,7 +4,7 @@ body {
   color: $dark;
 }
 
-p {
+p, span, a {
   line-height: $global-line-height;
 }
 
@@ -86,6 +86,11 @@ h1, h2, h3, .h1-title, .h2-title, .h3-title {
       margin-bottom: 10px;
     }
   }
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
 }
 
 section {

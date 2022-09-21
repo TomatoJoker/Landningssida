@@ -1,0 +1,43 @@
+.header {
+  padding: 30px 0px;
+  &__inner {
+    display: grid;
+    grid-template-columns: 170px auto 170px;
+    align-items: center;
+    gap: 100px;
+    &:before {
+      content: '';
+    }
+  }
+  &__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include gap(column, 30px);
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+  .menu {
+    flex: 1;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  @include gap(column, 20px);
+  @include gap(row, 10px);
+  justify-content: space-between;
+  &__item {
+    span, a {
+      color: $dark;
+    }
+    a {
+      @include hover {
+        color: $primary;
+      }
+    }
+  }
+}

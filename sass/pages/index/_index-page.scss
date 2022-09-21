@@ -115,6 +115,8 @@
 }
 
 .fqa {
+  padding-top: 150px;
+  padding-bottom: 240px;
   &__inner {
     margin: auto;
     max-width: 1100px;
@@ -136,6 +138,7 @@
   &__item {
     border-bottom: 1px solid $primary;
     margin-bottom: 20px;
+    cursor: pointer;
   }
   &__accordions {
     flex: 1;
@@ -151,7 +154,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     @include transition;
     .icon {
       margin-top: 2px;

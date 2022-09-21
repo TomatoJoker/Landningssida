@@ -24,5 +24,18 @@
       color: $primary;
     }
   }
+  &__small {
+    padding: 20px 37px;
+    color: $dark;
+    border-radius: 5px;
+    background-color: $primary;
+    border: 2px solid $primary;
+    text-align: center;
+    font-weight: 400;
+    @include hover {
+      background: $transparent;
+      color: $primary;
+    }
+  }
 }
 
